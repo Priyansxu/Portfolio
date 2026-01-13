@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import love_black from "../public/love-black.svg";
-import love_white from "../public/love-white.svg";
+import love_black from "../public/Assets/love-black.svg";
+import love_white from "../public/Assets/love-white.svg";
 
 export default function Contact() {
   const { systemTheme, theme } = useTheme();
