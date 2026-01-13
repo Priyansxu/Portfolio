@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  @apply bg-emerald-100 dark:bg-purple-400/70;
+}
+
+::-webkit-scrollbar {
+  @apply h-2 w-[12px] rounded-sm border-gray-100/20;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-rose-200/20 w-20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-400/50 rounded-[4px];
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-400;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .tech {
+    @apply hover:bg-gradient-to-tr hover:from-[#cae3e3] hover:via-[#f2e3ff] hover:to-[#ffdccb] 
+           dark:hover:from-[#cae3e320] dark:hover:via-[#f2e3ff35] dark:hover:to-[#ffdccb30] 
+           focus:bg-gradient-to-tr focus:from-[#cae3e3] focus:via-[#f2e3ff] focus:to-[#ffdccb]
+           transition-colors duration-200;
+  }
+
+  .cirGradient {
+    background: linear-gradient(120deg, #14b8a6 10%, #a855f7 45%, #f97316 100%);
+  }
+
+  .land::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -100;
+    background-image: url("/header-gradient.svg"), url("/footer-gradient.svg");
+    background-repeat: no-repeat;
+    background-position: center top, center bottom;
+    background-size: 1400px;
+  }
+
+  #scroll-down {
+    display: block;
+    position: relative;
+    padding-top: 79px;
+    text-align: center;
+  }
+
+  .arrow-down {
+    display: block;
+    margin: 0 auto;
+    width: 10px;
+    height: 38px;
+  }
+
+  .arrow-down:after {
+    content: "";
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-color: gray;
+    transform: rotate(135deg);
+  }
+
+  #scroll-down::before {
+    animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 50px;
+    content: " ";
+    background: gray;
+  }
+}
