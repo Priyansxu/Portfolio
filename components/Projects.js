@@ -1,4 +1,5 @@
 import Image from "next/image";
+import swirl from "../public/Assets/swirl-gradient.svg";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const Data = [
@@ -21,8 +22,8 @@ export default function Projects() {
 
         <div className="absolute -translate-y-3 -translate-x-2 left-0">
           <Image
-            src="/swirl.svg"
-            alt=""
+            src={swirl}
+            alt="swirl"
             width={160}
             height={48}
             priority
