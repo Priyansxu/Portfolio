@@ -2,7 +2,7 @@ import "./globals.css";
 import { Outfit, Lexend_Deca, Space_Mono, Homemade_Apple, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ThemeProvider from "@/components/ThemeProvider";
+import ThemeProvider from "@/components/Theme";
 
 const outfit = Outfit({
   subsets: ["latin"],
