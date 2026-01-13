@@ -2,8 +2,8 @@ import Image from "next/image";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
-import header_black from "../public/header-black.png";
-import header_white from "../public/header-white.png";
+import header_black from "../public/Assets/header-black.png";
+import header_white from "../public/Assets/header-white.png";
 
 export default function Header() {
   const { systemTheme, theme, setTheme } = useTheme();
