@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { BsArrowUpRight } from "react-icons/bs";
-import Avatar from "../public/Avatar.jpeg";
+import Avatar from "../public/Avatar.jpg";
 import Link from "next/link";
 
 import Divider from "@/components/Divider";
