@@ -24,8 +24,6 @@ export default function Projects() {
           <Image
             src={swirl}
             alt="swirl"
-            width={160}
-            height={48}
             priority
           />
         </div>
