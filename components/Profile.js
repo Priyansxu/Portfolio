@@ -7,33 +7,30 @@ import Avatar from "../public/Avatar.jpg";
 
 export default function Profile() {
   return (
-    <section className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 py-8 sm:py-12">
+    <header className="flex flex-row justify-start items-center mt-20">
       <Image
         src={Avatar}
         alt="Avatar"
         width={80}
         height={80}
         priority
-        className="object-cover rounded-2xl border-2 border-slate-200 dark:border-slate-700 w-20 h-20 sm:w-24 sm:h-24"
+        className="object-cover rounded-3xl border-2 border-black dark:border-white filter saturate-65"
       />
 
-      <div className="flex flex-col">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-950 dark:text-white">
+      <div className="flex flex-col ml-4">
+        <h2 className="font-bold sm:text-2xl md:text-2xl lg:text-4xl">
           Priyanshu Gupta
-        </h1>
-        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-2">
-          Developer, Designer & Astronomy Enthusiast
-        </p>
+        </h2>
 
         <Link
           href="https://github.com/Priyansxu"
           target="_blank"
-          className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mt-3 text-sm sm:text-base"
+          className="text-[#717171bb] flex items-center"
         >
           <span>@priyansxu</span>
-          <BsArrowUpRight className="w-4 h-4" />
+          <BsArrowUpRight className="stroke-1 h-3 ml-1" />
         </Link>
       </div>
-    </section>
+    </header>
   );
 }
