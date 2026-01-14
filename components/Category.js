@@ -1,6 +1,6 @@
 export default function Category() {
   return (
-    <div className="flex select-none max-w-lg text-xs sm:text-sm items-center font-semibold justify-between w-[100%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%] mx-auto mt-10 mb-4">
+    <div className="flex flex-wrap select-none max-w-lg text-xs sm:text-sm items-center font-semibold justify-center gap-2 sm:gap-3 w-[100%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%] mx-auto mt-10 mb-4">
       <div className="bg-gradient-to-r from-[#ffe4e4] to-[#ffe2d4] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#cf3903]">
         Developer
       </div>
