@@ -61,7 +61,7 @@ export default function Projects() {
           </div>
 
           <div className="ml-[10px] pl-5 border-l-2 border-dashed border-purple-300">
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
               {item.date}
             </p>
 
@@ -69,7 +69,7 @@ export default function Projects() {
               {item.tags.map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
-                  className="px-2 py-0.5 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-[9px] font-medium rounded-full shadow-sm"
+                  className="px-2 py-0.5 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-[10px] font-medium rounded-full shadow-sm"
                 >
                   {tag}
                 </span>
