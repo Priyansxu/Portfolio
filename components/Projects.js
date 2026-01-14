@@ -1,4 +1,6 @@
-import { FiArrowUpRight } from "react-icons/fi"
+import Image from "next/image";
+import swirl from "../public/Assets/swirl-gradient.svg";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Data = [
   {
@@ -6,51 +8,76 @@ const Data = [
     subtitle: "AI-powered Discord bot",
     date: "May 2024",
     tags: ["Discord.py", "Python"],
-    link: "https://vexel.vercel.app",
-  },
-]
+    link: "https://vexel.vercel.app"
+  }
+];
 
 export default function Projects() {
   return (
-    <section className="mt-12 sm:mt-16">
-      <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 dark:text-white mb-8">Featured Projects</h2>
+    <div>
+      <div className="relative">
+        <h1 className="mt-10 text-black dark:text-white font-semiBold text-lg sm:text-xl inline-block">
+          Projects
+        </h1>
 
-      <div className="space-y-6">
-        {Data.map((item, index) => (
-          <div key={index} className="card-base p-6">
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full flex-shrink-0"></div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-slate-950 dark:text-white">{item.title}</h3>
-                </div>
+        <div className="absolute -translate-y-3 -translate-x-2 left-0">
+          <Image
+            src={swirl}
+            alt="swirl"
+            width={100}
+            height={48}
+            priority
+          />
+        </div>
+      </div>
 
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mb-4">{item.subtitle}</p>
+      {Data.map((item, index) => (
+        <div key={index} className="mt-4 mb-8 relative">
+          <div className="flex items-center mb-2">
+            <div className="w-5 h-5 bg-gradient-to-br from-indigo-500 to-rose-500 rounded-full flex items-center justify-center shadow-md opacity-50 dark:opacity-80">
+              <div className="w-3 h-3 bg-white rounded-full"></div>
+            </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.map((tag, idx) => (
-                    <span key={idx} className="tag text-xs sm:text-sm">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+            <div className="ml-3 translate-y-2 mb-2">
+              <div className="relative flex items-center">
+                <h3 className="text-base sm:text-lg font-medium text-gray-800 dark:text-gray-100">
+                  {item.title}
+                </h3>
 
-                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-500">{item.date}</p>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  className="text-indigo-400/70 hover:text-indigo-700"
+                  aria-label={`Link to ${item.title} project`}
+                >
+                  <FiArrowUpRight className="w-5 h-5" />
+                </a>
               </div>
 
-              <a
-                href={item.link}
-                target="_blank"
-                className="flex-shrink-0 p-2 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/30 rounded-lg transition-colors"
-                aria-label={`Link to ${item.title}`}
-                rel="noreferrer"
-              >
-                <FiArrowUpRight className="w-5 h-5" />
-              </a>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                {item.subtitle}
+              </p>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
-  )
+
+          <div className="ml-[10px] pl-5 border-l-2 border-dashed border-purple-300">
+            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2">
+              {item.date}
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-2">
+              {item.tags.map((tag, tagIndex) => (
+                <span
+                  key={tagIndex}
+                  className="px-2 py-0.5 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-[10px] sm:text-xs font-medium rounded-full shadow-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
