@@ -1,52 +1,72 @@
 "use client"
 
-import { MdLightMode, MdDarkMode } from "react-icons/md"
-import { useState, useEffect } from "react"
-import { useTheme } from "next-themes"
+import Image from "next/image";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
+import { useState, useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
+import header_black from "../public/Assets/header-black.png";
+import header_white from "../public/Assets/header-white.png";
 
 export default function Header() {
-  const { systemTheme, theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const touchRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    setMounted(true)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      if (window.scrollY > 70) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    setMounted(true);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
-  const currentTheme = theme === "system" ? systemTheme : theme
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <header
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-300 w-[90%] sm:w-full px-4 sm:px-6 max-w-sm sm:max-w-md ${
-        isScrolled ? "bg-white/80 dark:bg-slate-900/80 shadow-lg" : "bg-white/60 dark:bg-slate-900/60"
-      } backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-2xl`}
+    <nav
+      ref={touchRef}
+      className={`${
+        isScrolled && "bg-opacity-[0.7] shadow-md drop-shadow-lg "
+      } font-medium duration-500 bg-opacity-60 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[50%] lg:w-[40%] xl:w-[40%] max-w-3xl mx-auto bg-white dark:bg-[#353535] drop-shadow-xs backdrop-blur-sm top-4 sticky rounded-2xl`}
     >
-      <div className="flex items-center justify-between py-3 px-2 sm:px-6">
-        <button
-          onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-          className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
-          aria-label="Toggle theme"
-        >
+      <div className="flex items-center justify-between py-1 md:px-8 px-6">
+        {currentTheme === "dark" ? (
+          <button
+            onClick={() => {
+              setTheme("light");
+            }}
+            className="w-max"
+          >
+            <MdLightMode className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              setTheme("dark");
+            }}
+            className="w-max"
+          >
+            <MdDarkMode className="w-5 h-5 sm:w-6 sm:h-6 fill-black" />
+          </button>
+        )}
+        <div className="mx-auto select-none cursor-pointer -translate-x-2">
           {currentTheme === "dark" ? (
-            <MdLightMode className="w-5 h-5 text-yellow-400" />
+            <Image src={header_white} alt="header" width="140" />
           ) : (
-            <MdDarkMode className="w-5 h-5 text-slate-700" />
+            <Image src={header_black} alt="header" width="140" />
           )}
-        </button>
-
-        <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-          Priyanshu
-        </h1>
-
-        <div className="w-5"></div>
+        </div>
       </div>
-    </header>
-  )
+    </nav>
+  );
 }
