@@ -1,33 +1,18 @@
 export default function Category() {
-  const categories = [
-    {
-      label: "Developer",
-      color: "from-red-100 to-orange-100 dark:from-red-900/30 dark:to-orange-900/30 text-red-700 dark:text-red-300",
-    },
-    {
-      label: "Designer",
-      color: "from-green-100 to-cyan-100 dark:from-green-900/30 dark:to-cyan-900/30 text-green-700 dark:text-green-300",
-    },
-    {
-      label: "Astronomy",
-      color: "from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300",
-    },
-    {
-      label: "Psychology",
-      color: "from-pink-100 to-rose-100 dark:from-pink-900/30 dark:to-rose-900/30 text-pink-700 dark:text-pink-300",
-    },
-  ]
-
   return (
-    <section className="flex flex-wrap gap-2 sm:gap-3 mt-8 mb-6">
-      {categories.map((cat, idx) => (
-        <div
-          key={idx}
-          className={`bg-gradient-to-r ${cat.color} rounded-lg px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold transition-transform hover:scale-105`}
-        >
-          {cat.label}
-        </div>
-      ))}
-    </section>
-  )
+    <div className="flex select-none max-w-lg text-xs sm:text-sm items-center font-semibold justify-between w-[100%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%] mx-auto mt-10 mb-4">
+      <div className="bg-gradient-to-r from-[#ffe4e4] to-[#ffe2d4] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#cf3903]">
+        Developer
+      </div>
+      <div className="bg-gradient-to-l from-[#e7ffdc] to-[#ddfff8] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#097360]">
+        Designer
+      </div>
+      <div className="bg-gradient-to-l from-[#cde1ff] to-[#f9d2ff] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#4e0aa2]">
+        Astronomy
+      </div>
+      <div className="bg-gradient-to-l from-[#ffdaf9] to-[#ffdcdc] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#690c58]">
+        Psychology
+      </div>
+    </div>
+  );
 }
