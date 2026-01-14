@@ -69,7 +69,7 @@ export default function Projects() {
               {item.tags.map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
-                  className="px-2 py-0.5 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-[0.80rem] font-medium rounded-full shadow-sm"
+                  className="px-2 py-0.5 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-[9px] font-medium rounded-full shadow-sm"
                 >
                   {tag}
                 </span>
