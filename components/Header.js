@@ -36,8 +36,8 @@ export default function Header() {
     <nav
       ref={touchRef}
       className={`${
-        isScrolled && "bg-opacity-[0.7] shadow-md drop-shadow-lg "
-      } font-medium duration-500 bg-opacity-60 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[50%] lg:w-[40%] xl:w-[40%] max-w-3xl mx-auto bg-white dark:bg-[#353535] drop-shadow-xs backdrop-blur-sm top-4 sticky rounded-2xl`}
+        isScrolled && "bg-opacity-[0.7] shadow-md drop-shadow-lg dark:bg-slate-900/80 dark:shadow-lg"
+      } font-medium duration-500 bg-opacity-60 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[50%] lg:w-[40%] xl:w-[40%] max-w-3xl mx-auto bg-white dark:bg-slate-900/60 drop-shadow-xs backdrop-blur-sm dark:backdrop-blur-md dark:border dark:border-slate-700/50 top-4 sticky rounded-2xl`}
     >
       <div className="flex items-center justify-between py-1 md:px-8 px-6">
         {currentTheme === "dark" ? (
