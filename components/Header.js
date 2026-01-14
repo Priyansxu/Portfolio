@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
