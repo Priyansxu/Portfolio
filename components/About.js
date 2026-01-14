@@ -1,15 +1,18 @@
 export default function About() {
   return (
-    <section className="mt-8 sm:mt-12 text-base sm:text-lg lg:text-xl leading-relaxed text-slate-700 dark:text-slate-300">
-      <p className="font-light">
+    <main className="mt-6 text-base sm:text-lg lg:text-xl">
+      <p className="font-light sm:leading-6 md:leading-6 lg:leading-8">
         In the heart of Bihar,{" "}
-        <span className="font-semibold bg-gradient-to-r from-orange-500 to-green-500 dark:from-orange-400 dark:to-green-400 bg-clip-text text-transparent">
+        <span className="font-medium select-none animate-text bg-gradient-to-br from-[#ff911b] dark:from-[#ff8400] via-[#fff4f4] dark:via-[#fff] dark:text-black text-border2 to-[#43ff36] dark:to-[#12ff02] rounded px-2 py-[0.05rem]">
           INDIA
         </span>{" "}
-        I'm a high school student with a passion for technology. I believe in making tech simple and accessible for
-        everyone. Space exploration and the mysteries of the cosmos fascinate me deeply. Whether working independently
-        or collaborating with others, I'm constantly learning and creating innovative solutions.
+        I&apos;m just a high school student. But I&apos;ve got a mind for tech,
+        making it simple for those who need it. Space? Yeah, that fascinates me.
+        The science, the mystery—it&apos;s all part of the pull. Whether I&apos;m
+        on my own or not, I never stop learning and creating cool things.
+        I have a love-hate relationship with school—dislike it, but appreciate
+        it for the friends it brings.
       </p>
-    </section>
-  )
+    </main>
+  );
 }
