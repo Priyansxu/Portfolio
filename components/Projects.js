@@ -24,7 +24,7 @@ export default function Projects() {
           <Image
             src={swirl}
             alt="swirl"
-            width={160}
+            width={120}
             height={48}
             priority
           />
