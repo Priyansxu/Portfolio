@@ -12,8 +12,8 @@ export default function Home() {
   const { systemTheme, theme } = useTheme();
 
   return (
-    <div className="min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 py-8 bg-white dark:bg-slate-950">
-      <div className="mx-auto max-w-4xl">
+    <div className="lg:min-h-screen px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
+      <div className="lg:h-screen 2xl:h-max max-w-[90rem] mx-auto">
         <Profile />
         <Category />
         <About />
