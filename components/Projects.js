@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <div>
       <div className="relative">
-        <h1 className="mt-10 text-black dark:text-white font-semiBold text-2xl inline-block">
+        <h1 className="mt-10 text-black dark:text-white font-semiBold text-xl inline-block">
           Projects
         </h1>
 
@@ -24,7 +24,7 @@ export default function Projects() {
           <Image
             src={swirl}
             alt="swirl"
-            width={120}
+            width={100}
             height={48}
             priority
           />
@@ -40,7 +40,7 @@ export default function Projects() {
 
             <div className="ml-3 translate-y-2 mb-2">
               <div className="relative flex items-center">
-                <h3 className="text-xl font-medium text-gray-800 dark:text-gray-100">
+                <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">
                   {item.title}
                 </h3>
 
@@ -69,7 +69,7 @@ export default function Projects() {
               {item.tags.map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
-                  className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-xs font-medium rounded-full shadow-sm"
+                  className="px-2 py-0.5 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-xs font-medium rounded-full shadow-sm"
                 >
                   {tag}
                 </span>
