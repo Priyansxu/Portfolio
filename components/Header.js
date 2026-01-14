@@ -24,11 +24,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-300 w-full px-4 sm:px-6 max-w-sm sm:max-w-md ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-300 w-[90%] sm:w-full px-4 sm:px-6 max-w-sm sm:max-w-md ${
         isScrolled ? "bg-white/80 dark:bg-slate-900/80 shadow-lg" : "bg-white/60 dark:bg-slate-900/60"
       } backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-2xl`}
     >
-      <div className="flex items-center justify-between py-3 px-4 sm:px-6">
+      <div className="flex items-center justify-between py-3 px-2 sm:px-6">
         <button
           onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
           className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
