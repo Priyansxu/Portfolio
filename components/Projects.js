@@ -32,7 +32,7 @@ export default function Projects() {
       </div>
 
       {Data.map((item, index) => (
-        <div key={index} className="my-8 relative">
+        <div key={index} className="mt-4 mb-8 relative">
           <div className="flex items-center mb-2">
             <div className="w-5 h-5 bg-gradient-to-br from-indigo-500 to-rose-500 rounded-full flex items-center justify-center shadow-md opacity-50 dark:opacity-80">
               <div className="w-3 h-3 bg-white rounded-full"></div>
