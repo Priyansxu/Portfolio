@@ -14,10 +14,21 @@ export default function Contact() {
       </p>
 
       <p className="text-base sm:text-lg">
-        Not widely recognized, but always accessible on social media.
+        Not widely recognized, but always accessible on social media. DM me on
         <br />
-        You can send{" "}
-        <span className="text-blue-500 font-bold">EMail</span>{" "}
+        {" "}
+        <span className="text-orange-500 font-bold">Instagram</span>{" "}
+        <a
+          href="https://instagram.com/priyansxu_gupta"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold underline underline-offset-4 decoration-2 decoration-purple-400 dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer"
+        >
+          @priyansxu_gupta.
+        </a>
+        </span>
+        {" "}Send me an{" "}
+        <span className="text-blue-500 font-bold">Email</span>{" "}
         <a
           onClick={() =>
             navigator.clipboard.writeText("priyansxu@proton.me")
@@ -26,24 +37,11 @@ export default function Contact() {
           className="underline underline-offset-4 decoration-2 decoration-purple-400 group select-all font-semibold dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer"
         >
           priyanshu@gupta.is-a.dev
-        </a>{" "}
-        or DM me on{" "}
-        <span className="text-orange-500 font-bold">Instagram</span>{" "}
-        <a
-          href="https://instagram.com/priyansxu_gupta"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold underline underline-offset-4 decoration-2 decoration-purple-400 dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer"
-        >
-          @priyansxu_gupta
         </a>
-      </p>
-
+       </p>
       <div className="flex mx-auto justify-center mt-16 select-none">
         <span className="font-black font-app text-xl sm:text-2xl tracking-wider mx-3 md:mx-6">
           Spread Love
-        </span>
-
         <Image
           src={currentTheme === "dark" ? love_white : love_black}
           alt="love"
