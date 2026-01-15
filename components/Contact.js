@@ -20,11 +20,11 @@ export default function Contact() {
         </a>
         <br />Send an <span className="text-blue-500 font-bold">Email </span>at{" "}
         <a
-          href="mailto:priyanshu@gupta.is-a.dev"
-          onClick={() => navigator.clipboard.writeText("priyansxu@proton.me")}
+          href="mailto:priyansxu@yahoo.com"
+          onClick={() => navigator.clipboard.writeText("priyansxu@yahoo.com")}
           className="underline underline-offset-4 decoration-2 decoration-purple-400 select-all font-semibold dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer"
         >
-          priyanshu@gupta.is-a.dev
+          priyansxu@yahoo.com
         </a>
       </p>
 
