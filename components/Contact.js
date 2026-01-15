@@ -18,7 +18,7 @@ export default function Contact() {
         <a href="https://instagram.com/priyansxu_gupta" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-4 decoration-2 decoration-purple-400 dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer">
           @priyansxu_gupta
         </a>
-        . Send me an <br /><span className="text-blue-500 font-bold">Email </span>
+        . <br />Send me an <span className="text-blue-500 font-bold">Email </span>at 
         <a
           href="mailto:priyanshu@gupta.is-a.dev"
           onClick={() => navigator.clipboard.writeText("priyansxu@proton.me")}
