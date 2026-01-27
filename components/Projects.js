@@ -9,6 +9,13 @@ const Data = [
     date: "May 2024",
     tags: ["Discord.py", "Python"],
     link: "https://vexel.vercel.app"
+  },
+  {
+    title: "Seron",
+    subtitle: "Multi-model AI platform",
+    date: "Jan 2026",
+    tags: ["Nextjs", "Clerk"],
+    link: "https://seron.is-a.software"
   }
 ];
 
